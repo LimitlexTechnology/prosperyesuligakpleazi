@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import profileImage from 'figma:asset/a0043fc16bf2ca8a9b05311c63d1d06cb46297c1.png';
 
 export function Hero() {
   const [activeNav, setActiveNav] = useState('Home');
@@ -118,7 +117,7 @@ export function Hero() {
               <div className="absolute inset-0 bg-gradient-to-br from-purple-300 to-cyan-300 rounded-3xl transform rotate-6"></div>
               <div className="relative bg-white rounded-3xl p-4 shadow-xl">
                 <img
-                  src={profileImage}
+                  src="/profile.jpg"
                   alt="Prosper Yesuli Gakpleazi"
                   className="w-full h-auto rounded-2xl"
                 />

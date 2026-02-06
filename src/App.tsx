@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export function Hero() {
   const [activeNav, setActiveNav] = useState('Home');
@@ -126,6 +126,14 @@ export function Hero() {
           </div>
         </div>
       </div>
+    </div>
+  );
+}
+
+export default function App() {
+  return (
+    <div>
+      <Hero />
     </div>
   );
 }
