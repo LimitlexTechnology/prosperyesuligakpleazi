@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ExternalLink, X } from 'lucide-react';
+import { ExternalLink, X, Code2 } from 'lucide-react';
 
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
@@ -99,14 +99,37 @@ export function Portfolio() {
       emoji: '💻',
       content: 'I develop modern, responsive web applications using cutting-edge front-end technologies including React, HTML5, CSS3, and JavaScript. My approach emphasizes clean, maintainable code architecture and user-centric design principles. I have built full-stack educational platforms, e-commerce solutions, and content management systems. Each project prioritizes responsive design to ensure seamless experiences across desktop, tablet, and mobile devices. I utilize modern development tools and frameworks like Tailwind CSS for rapid prototyping and deployment. My work includes API integration, state management with React hooks, and optimization for performance and accessibility. I stay current with emerging technologies and best practices in web development, continuously improving my skills through certifications and hands-on projects. My commitment to excellence ensures that every web application I develop is scalable, maintainable, and delivers exceptional user experiences.',
       demoUrl: '',
-      imageUrl: '/Web Development/images/project.jpg',
+      imageUrl: '/Web Development/images/csa_hub.png',
       videoUrl: '',
       githubUrl: '',
       gallery: [
-        '/Web Development/images/screenshot1.jpg',
+        '/Web Development/images/csa_hub.png',
         '/Web Development/images/screenshot2.jpg',
         '/Web Development/images/screenshot3.jpg',
       ],
+      projects: [
+        {
+          title: 'Climate Smart Agriculture Hub (CSA HUB)',
+          type: 'Web Application',
+          description: 'Future-Proof Your Farm: Empowering the next generation of farmers with real-time climate intelligence and sustainable practices.',
+          image: '/Web Development/images/csa_hub.png',
+          link: '#'
+        },
+        {
+          title: 'Mount Kenya Wildlife Conservancy',
+          type: 'Website',
+          description: 'A non-profit trust dedicated to preserving the environment and the wildlife within.',
+          image: '/Web Development/images/screenshot2.jpg',
+          link: '#'
+        },
+        {
+          title: 'Sustainable Tech Solutions',
+          type: 'Corporate Website',
+          description: 'Leading the way in eco-friendly technology implementation for modern businesses.',
+          image: '/Web Development/images/screenshot3.jpg',
+          link: '#'
+        }
+      ]
     },
     {
       title: 'Environmental Projects',
@@ -114,10 +137,11 @@ export function Portfolio() {
       description: 'Research and advocacy for environmental conservation',
       color: 'from-green-500 to-cyan-500',
       emoji: '🌍',
-      content: 'My environmental work combines geographic expertise with advocacy for sustainability and conservation. I have conducted research on environmental challenges including waste management, deforestation, and climate change impacts. My research on "Household Solid Waste Management Practices at Nima and Mamobi, Accra" provided insights into urban environmental challenges and sustainable waste management solutions. I utilize GIS technology and spatial analysis to understand environmental patterns and inform conservation strategies. My advocacy work includes promoting environmental awareness through educational initiatives, community engagement, and digital campaigns. I work with environmental organizations to develop strategies that balance development needs with conservation goals. My projects address critical environmental issues such as urban sustainability, climate adaptation, and resource management. Through this work, I am contributing to a more sustainable future by bridging the gap between environmental science and practical implementation.',
+      content: 'My environmental work combines geographic expertise with advocacy for sustainability and conservation. A flagship initiative I successfully undertook is the "Clean & Green Environmental Project" at Mirekua International Community School (MICS). Themed "Greening Today, Sustaining Tomorrow," this project provided learners with a practical application of classroom theory while raising awareness about good sanitation and its health benefits. Activities included a community clean-up exercise covering the Sarpeiman-Ablorman-Opah-China Mall route, public education on environmental health, and direct engagement with residents. I also conduct research on environmental challenges including waste management and climate change impacts, such as my study on "Household Solid Waste Management Practices at Nima and Mamobi, Accra." I utilize GIS technology for spatial analysis to inform conservation strategies and work with organizations to develop sustainability strategies that balance development needs with conservation goals.',
       demoUrl: '',
-      imageUrl: '/Environmental Projects/images/project.jpg',
-      videoUrl: '',
+      imageUrl: '/Environmental Projects/images/clean_and_green_flyer.jpg',
+      videoUrl: 'https://www.linkedin.com/posts/prosper-yesuli-gakpleazi_environmentalleadership-sustainability-stewardship-activity-7398170649623564288-9FYo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC3_QPIBCPszUSDddRFmduJveUAI3aPFPoA',
+      embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398170546133262337?compact=1',
       githubUrl: '',
       gallery: [
         '/Environmental Projects/images/project1.jpg',
@@ -165,6 +189,9 @@ export function Portfolio() {
     e.stopPropagation();
     setSelectedImage(image);
   };
+
+  const isWebDev = selectedProject !== null && portfolioItems[selectedProject].title === 'Web Development';
+  const isEnvironmental = selectedProject !== null && portfolioItems[selectedProject].title === 'Environmental Projects';
 
   return (
     <>
@@ -221,40 +248,223 @@ export function Portfolio() {
       {/* Portfolio Modal */}
       {selectedProject !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
+          <div className={`bg-white rounded-2xl shadow-2xl w-full max-h-[90vh] overflow-y-auto ${isWebDev || isEnvironmental ? 'max-w-6xl' : 'max-w-4xl'} ${isWebDev ? 'bg-neutral-950 text-white' : ''}`}>
+
             {/* Modal Header */}
-            <div className={`h-48 sm:h-56 bg-gradient-to-br ${portfolioItems[selectedProject].color} flex items-center justify-center relative p-6`}>
-              <button
-                onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 transition-all shadow-md z-10"
-              >
-                <X className="text-gray-900" size={24} />
-              </button>
-              <div className="text-6xl opacity-90 animate-bounce-slow">
-                {portfolioItems[selectedProject].emoji}
+            {isWebDev ? (
+              <div className="p-8 flex justify-between items-start">
+                <div>
+                  <span className="text-sm font-medium text-pink-500 tracking-wider uppercase mb-2 block">
+                    Portfolio
+                  </span>
+                  <h2 className="text-4xl md:text-5xl font-bold text-white mb-4">
+                    Web Development
+                  </h2>
+                  <div className="w-20 h-1 bg-gradient-to-r from-pink-500 to-purple-600 rounded-full mb-8"></div>
+                </div>
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="bg-white/10 hover:bg-white/20 rounded-full p-2 transition-all z-10"
+                >
+                  <X className="text-white" size={24} />
+                </button>
               </div>
-            </div>
+            ) : (
+              <div className={`h-48 sm:h-56 bg-gradient-to-br ${portfolioItems[selectedProject].color} flex items-center justify-center relative p-6`}>
+                <button
+                  onClick={() => setSelectedProject(null)}
+                  className="absolute top-4 right-4 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 transition-all shadow-md z-10"
+                >
+                  <X className="text-gray-900" size={24} />
+                </button>
+                <div className="text-6xl opacity-90 animate-bounce-slow">
+                  {portfolioItems[selectedProject].emoji}
+                </div>
+              </div>
+            )}
+
 
             {/* Modal Content */}
-            <div className="p-6 sm:p-8">
-              <div className="flex flex-wrap items-center gap-3 mb-4">
-                <span className="text-xs font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
-                  {portfolioItems[selectedProject].category}
-                </span>
+            <div className={`p-6 sm:p-8 ${isWebDev ? 'pt-0' : ''}`}>
+              {/* Environmental Projects Layout */}
+              {isEnvironmental && (
+                <div className="space-y-12">
+                  {/* Header Section */}
+                  <div className="border-b border-gray-100 pb-8">
+                    <span className="text-sm font-medium text-green-600 tracking-wider uppercase mb-3 block">
+                      {portfolioItems[selectedProject].category}
+                    </span>
+                    <h2 className="text-3xl md:text-5xl font-bold text-gray-900 mb-6">
+                      {portfolioItems[selectedProject].title}
+                    </h2>
+                    <div className="w-24 h-1.5 bg-gradient-to-r from-green-500 to-emerald-600 rounded-full"></div>
+                  </div>
+
+                  {/* Main Content Grid */}
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+                    {/* Left: Flyer Image */}
+                    <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-zoom-in"
+                      onClick={(e) => handleImageClick('/Environmental Projects/images/clean_and_green_flyer.jpg', e)}>
+                      <img
+                        src="/Environmental Projects/images/clean_and_green_flyer.jpg"
+                        alt="Clean & Green Flyer"
+                        className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
+                      />
+                      <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-10 transition-all flex items-center justify-center">
+                        <span className="opacity-0 group-hover:opacity-100 bg-white/90 text-gray-900 px-4 py-2 rounded-full text-sm font-medium shadow-sm transition-opacity">
+                          View Full Size
+                        </span>
+                      </div>
+                    </div>
+
+                    {/* Right: Featured Video (Tall Embed) */}
+                    {portfolioItems[selectedProject].embedUrl && (
+                      <div className="relative w-full h-full min-h-[400px] rounded-2xl overflow-hidden shadow-2xl border border-gray-100 bg-gray-50">
+                        <iframe
+                          src={portfolioItems[selectedProject].embedUrl}
+                          className="absolute inset-0 w-full h-full"
+                          frameBorder="0"
+                          allowFullScreen
+                          title="Clean & Green Environmental Project"
+                        ></iframe>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              )}
+
+              {/* Standard Project Layout (Non-WebDev, Non-Environmental) */}
+              {!isWebDev && !isEnvironmental && (
+                <>
+                  <div className="flex flex-wrap items-center gap-3 mb-4">
+                    <span className="text-xs font-medium text-purple-600 bg-purple-100 px-3 py-1 rounded-full">
+                      {portfolioItems[selectedProject].category}
+                    </span>
+                  </div>
+
+                  <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
+                    {portfolioItems[selectedProject].title}
+                  </h2>
+
+                  <div className="w-12 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6"></div>
+                </>
+              )}
+
+              <div className={`mb-16 ${isEnvironmental ? 'hidden' : ''} ${isWebDev ? 'flex flex-col lg:flex-row gap-12 items-start' : ''}`}>
+                <div className={`${isWebDev ? 'lg:w-2/3' : 'w-full'}`}>
+                  <p className={`${isWebDev ? 'text-gray-400 text-lg md:text-xl leading-relaxed' : 'text-gray-700 leading-relaxed text-base sm:text-lg mb-6'}`}>
+                    {portfolioItems[selectedProject].content}
+                  </p>
+                </div>
+
+                {isWebDev && (
+                  <div className="lg:w-1/3 w-full bg-neutral-900/50 rounded-xl p-6 border border-white/5">
+                    <h4 className="text-white font-semibold mb-6 flex items-center gap-2">
+                      <Code2 className="text-pink-500" /> Technologies
+                    </h4>
+                    <div className="grid grid-cols-3 gap-6">
+                      {/* React */}
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" alt="React" className="w-full h-full" />
+                        </div>
+                        <span className="text-xs text-gray-400">React</span>
+                      </div>
+                      {/* HTML5 */}
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" alt="HTML5" className="w-full h-full" />
+                        </div>
+                        <span className="text-xs text-gray-400">HTML5</span>
+                      </div>
+                      {/* CSS3 */}
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" alt="CSS3" className="w-full h-full" />
+                        </div>
+                        <span className="text-xs text-gray-400">CSS3</span>
+                      </div>
+                      {/* JavaScript */}
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" alt="JavaScript" className="w-full h-full rounded" />
+                        </div>
+                        <span className="text-xs text-gray-400">JS</span>
+                      </div>
+                      {/* Tailwind */}
+                      <div className="flex flex-col items-center gap-2 group">
+                        <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center p-2 group-hover:bg-white/10 transition-colors">
+                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" alt="Tailwind" className="w-full h-full" />
+                        </div>
+                        <span className="text-xs text-gray-400">Tailwind</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
 
-              <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">
-                {portfolioItems[selectedProject].title}
-              </h2>
+              {/* Web Development Showcase Layout */}
+              {isWebDev && portfolioItems[selectedProject].projects && (
+                <div className="space-y-24 mb-12">
+                  {portfolioItems[selectedProject].projects.map((project, idx) => (
+                    <div key={idx} className={`flex flex-col ${idx % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'} items-center gap-12 lg:gap-20`}>
+                      {/* Laptop Mockup */}
+                      <div className="w-full lg:w-3/5">
+                        <div className="relative mx-auto border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[200px] sm:h-[300px] md:h-[350px] lg:h-[400px] max-w-full shadow-2xl">
+                          <div className="rounded-lg overflow-hidden h-full bg-white">
+                            <img
+                              src={project.image}
+                              className="w-full h-full object-contain object-top hover:object-bottom transition-all duration-[2000ms]"
+                              alt={project.title}
+                            />
+                          </div>
+                        </div>
+                        <div className="relative mx-auto bg-gray-900 rounded-b-xl rounded-t-sm h-[17px] max-w-[90%] md:h-[24px] md:max-w-[85%] z-20">
+                          <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[5px] w-[80px] bg-gray-800 rounded-b-md"></div>
+                        </div>
+                      </div>
 
-              <div className="w-12 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full mb-6"></div>
+                      {/* Content */}
+                      <div className="w-full lg:w-2/5 text-center lg:text-left">
+                        <span className="text-pink-500 font-medium tracking-wide text-sm mb-3 block">
+                          {project.type}
+                        </span>
+                        <h3 className="text-3xl lg:text-4xl font-bold text-white mb-6 leading-tight">
+                          {project.title}
+                        </h3>
+                        <p className="text-gray-400 text-lg leading-relaxed mb-8">
+                          {project.description}
+                        </p>
+                        <a
+                          href={project.link}
+                          className="inline-flex items-center justify-center w-12 h-12 rounded-full border border-gray-700 hover:border-pink-500 hover:bg-pink-500 text-white transition-all group"
+                        >
+                          <ExternalLink size={20} className="group-hover:rotate-45 transition-transform" />
+                        </a>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
 
-              <p className="text-gray-700 leading-relaxed text-base sm:text-lg mb-6">
-                {portfolioItems[selectedProject].content}
-              </p>
+              {/* Embedded Video Section */}
+              {!isWebDev && !isEnvironmental && portfolioItems[selectedProject].embedUrl && (
+                <div className="mb-8">
+                  <h3 className="text-lg font-bold text-gray-900 mb-4">Featured Video</h3>
+                  <div className="relative w-full pb-[56.25%] h-0 rounded-xl overflow-hidden shadow-lg border border-gray-100">
+                    <iframe
+                      src={portfolioItems[selectedProject].embedUrl}
+                      className="absolute top-0 left-0 w-full h-full"
+                      frameBorder="0"
+                      allowFullScreen
+                      title="Embedded video"
+                    ></iframe>
+                  </div>
+                </div>
+              )}
 
               {/* Gallery Section - Masonry Layout */}
-              {portfolioItems[selectedProject].gallery && portfolioItems[selectedProject].gallery.length > 0 && (
+              {!isWebDev && portfolioItems[selectedProject].gallery && portfolioItems[selectedProject].gallery.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Gallery</h3>
                   <div className="columns-2 sm:columns-3 gap-4 space-y-4">
@@ -282,7 +492,7 @@ export function Portfolio() {
               )}
 
               {/* Subcategories Section */}
-              {portfolioItems[selectedProject].subcategories && portfolioItems[selectedProject].subcategories.length > 0 && (
+              {!isWebDev && portfolioItems[selectedProject].subcategories && portfolioItems[selectedProject].subcategories.length > 0 && (
                 <div className="mb-8">
                   {portfolioItems[selectedProject].subcategories.map((subcategory, subIdx) => (
                     <div key={subIdx} className="mb-8">
@@ -314,56 +524,58 @@ export function Portfolio() {
               )}
 
               {/* External Links Section */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
-                {portfolioItems[selectedProject].demoUrl && (
-                  <a
-                    href={portfolioItems[selectedProject].demoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
-                  >
-                    <ExternalLink size={18} />
-                    Live Demo
-                  </a>
-                )}
-                {portfolioItems[selectedProject].imageUrl && (
-                  <a
-                    href={portfolioItems[selectedProject].imageUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
-                  >
-                    🖼️
-                    View Images
-                  </a>
-                )}
-                {portfolioItems[selectedProject].videoUrl && (
-                  <a
-                    href={portfolioItems[selectedProject].videoUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
-                  >
-                    ▶️
-                    Watch Video
-                  </a>
-                )}
-                {portfolioItems[selectedProject].githubUrl && (
-                  <a
-                    href={portfolioItems[selectedProject].githubUrl}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-lg font-medium transition-all"
-                  >
-                    💻
-                    GitHub Repo
-                  </a>
-                )}
-              </div>
+              {!isWebDev && (
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
+                  {portfolioItems[selectedProject].demoUrl && (
+                    <a
+                      href={portfolioItems[selectedProject].demoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
+                    >
+                      <ExternalLink size={18} />
+                      Live Demo
+                    </a>
+                  )}
+                  {portfolioItems[selectedProject].imageUrl && (
+                    <a
+                      href={portfolioItems[selectedProject].imageUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
+                    >
+                      🖼️
+                      View Images
+                    </a>
+                  )}
+                  {portfolioItems[selectedProject].videoUrl && (
+                    <a
+                      href={portfolioItems[selectedProject].videoUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded-lg font-medium transition-all"
+                    >
+                      ▶️
+                      Watch Video
+                    </a>
+                  )}
+                  {portfolioItems[selectedProject].githubUrl && (
+                    <a
+                      href={portfolioItems[selectedProject].githubUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center justify-center gap-2 bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-lg font-medium transition-all"
+                    >
+                      💻
+                      GitHub Repo
+                    </a>
+                  )}
+                </div>
+              )}
 
               <button
                 onClick={() => setSelectedProject(null)}
-                className="w-full sm:w-auto bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all"
+                className={`w-full sm:w-auto px-6 py-3 rounded-lg font-medium transition-all ${isWebDev ? 'bg-white text-black hover:bg-gray-200' : 'bg-gradient-to-r from-purple-600 to-pink-600 text-white hover:from-purple-700 hover:to-pink-700'}`}
               >
                 Close
               </button>
