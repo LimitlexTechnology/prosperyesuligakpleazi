@@ -524,7 +524,7 @@ export function Portfolio() {
               )}
 
               {/* External Links Section */}
-              {!isWebDev && (
+              {!isWebDev && !isEnvironmental && (
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mb-6">
                   {portfolioItems[selectedProject].demoUrl && (
                     <a
