@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Palette, Briefcase, GraduationCap, Globe, TrendingUp } from 'lucide-react';
 
 export function Services() {

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Palette, Users, Settings, Trophy } from 'lucide-react';
 
 export function Skills() {
@@ -18,11 +17,11 @@ export function Skills() {
       icon: Code,
       title: 'Technical Skills',
       skills: [
-        'Front-End Development (HTML, CSS, JavaScript)',
         'Project Planning and Management',
-        'Virtual and Administrative Tools',
-        'Education Technology Integration',
-        'Digital Marketing and Social Media',
+        'Proficient in Virtual and Administrative Tools',
+        'Graphic Designing and Content Creation',
+        'Front-End Development and Education Technology',
+        'Digital Marketing and Social Media Management',
       ],
     },
     {
@@ -30,10 +29,10 @@ export function Skills() {
       title: 'Creative Skills',
       skills: [
         'Graphic Design and Visual Communication',
+        'Professional Photography and Videography',
         'Content Creation and Storytelling',
-        'Photography and Videography',
         'Brand Management and Strategy',
-        'AI Media and Digital Content',
+        'AI Media and Digital Content Creation',
       ],
     },
     {
@@ -42,9 +41,9 @@ export function Skills() {
       skills: [
         'STEM Education and Instructional Design',
         'Geographic Information and Spatial Analysis',
-        'Environmental Sustainability',
-        'Administrative Operations Management',
-        'Curriculum Development and Assessment',
+        'Environmental Sustainability and Conservation',
+        'Administrative Operations and Workflow Optimization',
+        'Curriculum Development and Academic Assessment',
       ],
     },
   ];
@@ -54,21 +53,49 @@ export function Skills() {
       title: 'AI Media & Storytelling Certificate',
       organization: 'The Educators\' Network',
       year: '2025',
+      description: 'AI-driven media creation and educational storytelling',
     },
     {
       title: 'Teaching License',
       organization: 'National Teaching Council – Ghana',
       year: '2021',
+      description: 'Professional teaching certification',
     },
     {
       title: 'Certificate of Participation',
-      organization: 'Youth Legacy Ghana - SDGs Research',
+      organization: 'Youth Legacy Ghana',
       year: '2019',
+      description: 'SDGs Research Conference: The Role of the Youth',
+    },
+    {
+      title: 'Certificate of Recognition',
+      organization: 'Prince Boateng SHS',
+      year: '2018',
+      description: 'Dedicated service as Geography Teacher',
+    },
+    {
+      title: 'Certificate of Participation',
+      organization: 'GEOSA-UEW',
+      year: '2017',
+      description: 'Ghana\'s Forestry Base and Climatic Influence',
     },
     {
       title: 'General Course Representative',
-      organization: 'GEOSA-UEW',
+      organization: 'Geography Students Association',
       year: '2017-2019',
+      description: 'Leadership in GEOSA-UEW',
+    },
+    {
+      title: 'Audit Board Secretary',
+      organization: 'Geography Students Association',
+      year: '2017-2018',
+      description: 'Financial oversight and accountability',
+    },
+    {
+      title: '2nd Runner-Up - 5000m Sprint',
+      organization: 'Inter-Houses Athletic Competition',
+      year: '2012',
+      description: 'Academic institution achievement',
     },
   ];
 
@@ -122,24 +149,31 @@ export function Skills() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 sm:gap-6">
           {awards.map((award, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 p-5 sm:p-6 rounded-xl border border-purple-100 hover:border-purple-300 hover:shadow-lg transition-all duration-300 text-center"
+              className="bg-gradient-to-br from-purple-50 to-pink-50 p-5 sm:p-6 rounded-xl border border-purple-100 hover:border-purple-300 hover:shadow-lg transition-all duration-300 flex flex-col"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                <Trophy className="text-white" size={24} />
+              <div className="flex-shrink-0 mb-4">
+                <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center">
+                  <Trophy className="text-white" size={24} />
+                </div>
               </div>
-              <span className="inline-block bg-purple-200 text-purple-800 text-xs px-3 py-1 rounded-full mb-3 font-medium">
+              <span className="inline-block bg-purple-200 text-purple-800 text-xs px-3 py-1 rounded-full mb-3 font-medium w-fit">
                 {award.year}
               </span>
-              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 leading-snug">
+              <h3 className="text-sm sm:text-base font-bold text-gray-900 mb-2 leading-snug flex-grow">
                 {award.title}
               </h3>
-              <p className="text-xs sm:text-sm text-gray-600">
+              <p className="text-xs text-gray-600 mb-2 font-medium">
                 {award.organization}
               </p>
+              {award.description && (
+                <p className="text-xs text-gray-500 leading-relaxed">
+                  {award.description}
+                </p>
+              )}
             </div>
           ))}
         </div>

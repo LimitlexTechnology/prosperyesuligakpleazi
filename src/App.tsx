@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import { Hero } from './components/ui/Hero';
 import { About } from './components/ui/About';
 import { Experience } from './components/ui/Experience';

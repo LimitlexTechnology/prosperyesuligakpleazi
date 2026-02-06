@@ -1,4 +1,3 @@
-import React from 'react';
 import { BookOpen, Code, Lightbulb, Globe, GraduationCap, Rocket } from 'lucide-react';
 
 export function Blog() {

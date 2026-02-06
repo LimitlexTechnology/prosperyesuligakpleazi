@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 
 export function Hero() {
   const [activeNav, setActiveNav] = useState('Home');

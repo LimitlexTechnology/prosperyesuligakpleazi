@@ -1,4 +1,3 @@
-import React from 'react';
 import { Code, Palette, Briefcase, Globe, GraduationCap } from 'lucide-react';
 
 export function About() {
@@ -6,27 +5,27 @@ export function About() {
     {
       icon: Code,
       title: 'Software Engineer',
-      description: 'Building modern web applications with front-end technologies. Currently pursuing BS in Computer Science at University of The People.',
+      description: 'Building modern web applications with front-end technologies (HTML, CSS, JavaScript, React). Currently pursuing BS in Computer Science at University of The People and ALX Front-End ProDev certification.',
     },
     {
       icon: Palette,
       title: 'Graphic Designer',
-      description: 'Creating compelling visual content, branding materials, photography, and multimedia campaigns for diverse clients since 2019.',
+      description: 'Creating compelling visual content, branding materials, professional photography and videography. Expert in digital and print design with 7+ years of experience delivering engaging multimedia campaigns.',
     },
     {
       icon: Briefcase,
-      title: 'Executive Assistant',
-      description: 'Expert in administrative support, project coordination, digital content creation, social media strategy, and brand management.',
+      title: 'Virtual Assistant & Operations Manager',
+      description: 'Expert in administrative support, project coordination, digital content creation, social media strategy, brand management, and workflow optimization for seamless operations.',
     },
     {
       icon: Globe,
-      title: 'Geographer',
-      description: 'BA in Geography Education with focus on environmental sustainability, spatial analysis, and climate change research.',
+      title: 'Geographer & Sustainability Advocate',
+      description: 'BA in Geography Education with research focus on environmental sustainability, spatial analysis, and climate change. Dedicated to promoting conservation and digital transformation for environmental goals.',
     },
     {
       icon: GraduationCap,
-      title: 'Educationist',
-      description: 'Licensed educator and Head of JHS Department, driving academic excellence through innovative STEM instruction and curriculum development.',
+      title: 'Educator & STEM Specialist',
+      description: 'Licensed educator and Head of JHS Department, driving academic excellence through innovative STEM instruction. Proficient in instructional design, curriculum development, and tech-based learning integration.',
     },
   ];
 
@@ -40,11 +39,12 @@ export function About() {
           <div className="flex justify-center">
             <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
           </div>
-          <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mt-6">
-            Results-driven and versatile professional with proven excellence across education, 
-            administration, and technology sectors. Strategic problem-solver with strong leadership, 
-            communication, and collaboration skills. Passionate about leveraging education, media, 
-            and technology to promote sustainability and digital transformation.
+          <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto mt-6 leading-relaxed">
+            Results-driven and versatile professional with proven excellence across education, administration, and technology sectors. 
+            Experienced Executive Assistant adept in administrative support, communication, social media strategy, brand management, digital content creation and marketing. 
+            Skilled in instructional design and STEM education, driving improved academic performance through innovative, tech-based learning. 
+            Strategic problem-solver with strong leadership, communication, and collaboration skills. 
+            Passionate about leveraging education, media, and technology to promote sustainability and digital transformation.
           </p>
         </div>
 

@@ -1,4 +1,3 @@
-import React from 'react';
 import { Calendar, MapPin, Briefcase } from 'lucide-react';
 
 interface ExperienceItem {
@@ -19,9 +18,11 @@ export function Experience() {
       period: 'September 2025 – Present',
       current: true,
       description: [
-        'Lead lesson planning, supervision, and performance evaluation',
-        'Coordinate teachers\' professional development and workloads',
-        'Oversee BECE examination preparation and moderation',
+        'Lead lesson planning, lesson supervision, and performance evaluation across JHS levels',
+        'Coordinate teachers\' workloads, meetings, and professional development sessions',
+        'Supervise teachers to enhance instructional quality and classroom management',
+        'Oversee the preparation and moderation of internal and external examinations (BECE)',
+        'Ensure effective implementation of continuous assessments and academic interventions',
       ],
     },
     {
@@ -31,9 +32,10 @@ export function Experience() {
       period: 'October 2023 – Present',
       current: true,
       description: [
-        'Improve Science performance through student-centered teaching',
-        'Introduce low-cost instructional materials and led science club',
-        'Integrate digital tools to boost engagement',
+        'Improve Science performance through practical, student-centered teaching',
+        'Introduce low-cost instructional materials and led vibrant school science club',
+        'Promote environmental awareness through science projects',
+        'Integrate digital tools and simulations to boost engagement and curiosity',
       ],
     },
     {
@@ -43,9 +45,21 @@ export function Experience() {
       period: 'January 2022 – Present',
       current: true,
       description: [
-        'Led day-to-day operations for educational programs',
-        'Design workflows for AI-enabled learning and training',
-        'Collaborate with IT, finance and marketing teams',
+        'Lead day-to-day operations to ensure effective delivery of educational programs',
+        'Design and implement streamlined workflows for content development, AI enabled learning and training delivery',
+        'Ensure full compliance with educational regulations and internal operations policies',
+        'Collaborate with IT, finance and marketing teams to execute strategic objectives',
+      ],
+    },
+    {
+      title: 'Inventory Officer',
+      company: 'Growelb Agrochemicals Enterprise',
+      location: 'Nsawam, Ghana',
+      period: 'November 2024 – July 2025',
+      current: false,
+      description: [
+        'Managed inventory systems, digital marketing strategies and customer engagement',
+        'Enhanced organizational efficiency and online presence',
       ],
     },
     {
@@ -55,9 +69,10 @@ export function Experience() {
       period: 'April 2019 – Present',
       current: true,
       description: [
-        'Design creative visuals and branding materials',
-        'Produce professional photography and videography',
-        'Deliver engaging digital and print outputs',
+        'Design creative visuals and branding materials for diverse clients and projects',
+        'Produce professional photography and videography, enhancing visual storytelling',
+        'Collaborate on multimedia campaigns, ensuring high-quality digital and print outputs',
+        'Utilize modern design software and tools to deliver engaging and impactful content',
       ],
     },
     {
@@ -67,8 +82,9 @@ export function Experience() {
       period: 'January 2021 – December 2025',
       current: false,
       description: [
-        'Boosted student performance through innovative STEM projects',
-        'Coordinated graduation events and composed school anthem',
+        'Boosted student performance through innovative STEM projects and teaching strategies',
+        'Coordinated graduation music and choreography, delivering memorable school events',
+        'Composed school anthem and educational songs in promoting school values',
       ],
     },
     {
@@ -78,9 +94,34 @@ export function Experience() {
       period: 'January 2019 – August 2020',
       current: false,
       description: [
-        'Provided administrative and operational support',
-        'Managed social media and marketing channels',
-        'Oversaw Airbnb reservations and client service',
+        'Provided administrative and operational support to ensure efficient office management',
+        'Coordinated recruitment, communication, and marketing activities',
+        'Managed company marketing channels, including social media and website updates, boosting brand visibility',
+        'Oversaw Airbnb and booking reservations, ensuring excellent client service and smooth guest experiences',
+      ],
+    },
+    {
+      title: 'Geography Teacher',
+      company: 'Prince Boateng Senior High School',
+      location: 'Nsawam, Ghana',
+      period: 'August 2018 – January 2019',
+      current: false,
+      description: [
+        'Taught Physical, Human, and Practical Geography in line with the NACCA curriculum',
+        'Enhanced students\' academic performance',
+        'Mentored students through extracurricular roles as an NCCE and Scripture Union patron',
+      ],
+    },
+    {
+      title: 'Social Media Coordinator',
+      company: 'Green Innovation for People and Nature',
+      location: 'Winneba, Ghana',
+      period: 'August 2017 – December 2024',
+      current: false,
+      description: [
+        'Designed engaging graphics and digital content to promote environmental sustainability',
+        'Managed social media platforms to boost visibility and audience engagement',
+        'Supported organizational programs through creative media, campaigns, and content strategy aligned with conservation goals',
       ],
     },
   ];
