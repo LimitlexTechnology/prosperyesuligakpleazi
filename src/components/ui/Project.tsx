@@ -3,6 +3,7 @@ import { ExternalLink, X } from 'lucide-react';
 
 export function Portfolio() {
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
   const portfolioItems = [
     {
@@ -38,40 +39,56 @@ export function Portfolio() {
         {
           name: 'Brand & Visual Communication',
           gallery: [
-            '/Graphic Design/images/logos/Empowerlife logo signage mockup.jpg',
-            '/Graphic Design/images/logos/Nalisa Logo mockup.jpg',
-            '/Graphic Design/images/logos/THE WAY ELECTRICALS-1.jpg',
-            '/Graphic Design/images/logos/NPA Bus Mockup.jpg',
-            '/Graphic Design/images/logos/Card Excel MOCK.jpg',
-            '/Graphic Design/images/logos/DonneJosh Logo Mockup.jpg',
-            '/Graphic Design/images/logos/Eden MOCKUP.jpg',
-            '/Graphic Design/images/logos/Excel car branding.jpg',
-            '/Graphic Design/images/logos/Growelb One Vision mockup.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/Empowerlife logo signage mockup.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/Nalisa Logo mockup.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/THE WAY ELECTRICALS-1.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/NPA Bus Mockup.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/Card Excel MOCK.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/DonnieJosh Logo Mockup.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/Eden MOCKUP.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/Excel car branding.jpg',
+            '/Graphic Design/images/Brand & Visual Communication/Growelb One Vision mockup.jpg',
           ],
         },
         {
           name: 'Print & Publication Design',
           gallery: [
-            '/Graphic Design/images/signages/56in by 48in front.jpg',
-            '/Graphic Design/images/signages/A4 Eden.jpg',
-            '/Graphic Design/images/signages/Eden MOCKUPP.jpg',
-            '/Graphic Design/images/signages/Eform Survey Flyer 2.jpg',
-            '/Graphic Design/images/signages/From Kotoku-1.jpg',
-            '/Graphic Design/images/signages/Growelb Rollup Mockup.jpg',
-            '/Graphic Design/images/signages/Growelb Signage.jpg',
-            '/Graphic Design/images/signages/Hot and Tasty.jpg',
-            '/Graphic Design/images/signages/Jemlina Banner-1.jpg',
-            '/Graphic Design/images/signages/Review Vector Pullup-1.jpg',
+            '/Graphic Design/images/Print & Publication Design/Augustina Banner.jpg',
+            '/Graphic Design/images/Print & Publication Design/Naa Pullup.jpg',
+            '/Graphic Design/images/Print & Publication Design/Vipex Signage.jpg',
+            '/Graphic Design/images/Print & Publication Design/Victor Pullup Mock.jpg',
+            '/Graphic Design/images/Print & Publication Design/Ohemaa Kitchen Flyer.jpg',
+            '/Graphic Design/images/Print & Publication Design/NisiaNaya Freight Flyer.jpg',
+            '/Graphic Design/images/Print & Publication Design/JKT Broadcast.jpg',
+            '/Graphic Design/images/Print & Publication Design/Global Heatwave Main.jpg',
+            '/Graphic Design/images/Print & Publication Design/CITATION MOCKUP.jpg',
+            '/Graphic Design/images/Print & Publication Design/A2 STICKER.jpg',
           ],
         },
         {
           name: 'Product & Packaging Design',
           gallery: [
-            '/Graphic Design/images/packaging/mockup1.jpg',
-            '/Graphic Design/images/packaging/mockup2.jpg',
-            '/Graphic Design/images/packaging/mockup3.jpg',
+            '/Graphic Design/images/Product & Packaging Design/Crystal Hairs Packaging.jpg',
+            '/Graphic Design/images/Product & Packaging Design/Naya Shea Butter.jpg',
+            '/Graphic Design/images/Product & Packaging Design/Naya Tombrown.jpg',
+            '/Graphic Design/images/Product & Packaging Design/Naya Groundnut.jpg',
+            '/Graphic Design/images/Product & Packaging Design/Detox 5inX3in.jpg',
+            '/Graphic Design/images/Product & Packaging Design/3 x 4.5 Groundnut.jpg',
+            '/Graphic Design/images/Product & Packaging Design/CFS 10cm by 6cm.png',
+            '/Graphic Design/images/Product & Packaging Design/N Tigernut.jpg',
           ],
         },
+        {
+          name: 'Apparel & Merchandise',
+          gallery: [
+            '/Graphic Design/images/t-shirt-printing/6th White.jpg',
+            '/Graphic Design/images/t-shirt-printing/Charitable Shirt Mockup 1.jpg',
+            '/Graphic Design/images/t-shirt-printing/Charitable Shirt Mockup 2.jpg',
+            '/Graphic Design/images/t-shirt-printing/Donniejosh Shirt Mockup 2.jpg',
+            '/Graphic Design/images/t-shirt-printing/Naya shirt.jpg',
+            '/Graphic Design/images/t-shirt-printing/Warriors Gold.jpg',
+          ]
+        }
       ],
     },
     {
@@ -144,6 +161,11 @@ export function Portfolio() {
     },
   ];
 
+  const handleImageClick = (image: string, e: React.MouseEvent) => {
+    e.stopPropagation();
+    setSelectedImage(image);
+  };
+
   return (
     <>
       <section id="portfolio" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
@@ -156,7 +178,7 @@ export function Portfolio() {
               <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
             </div>
             <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto px-2">
-              A showcase of my work across various domains including education, technology, 
+              A showcase of my work across various domains including education, technology,
               design, and environmental sustainability.
             </p>
           </div>
@@ -199,16 +221,16 @@ export function Portfolio() {
       {/* Portfolio Modal */}
       {selectedProject !== null && (
         <div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center p-4">
-          <div className="bg-white rounded-2xl shadow-2xl max-w-2xl w-full max-h-[90vh] overflow-y-auto">
+          <div className="bg-white rounded-2xl shadow-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto">
             {/* Modal Header */}
             <div className={`h-48 sm:h-56 bg-gradient-to-br ${portfolioItems[selectedProject].color} flex items-center justify-center relative p-6`}>
               <button
                 onClick={() => setSelectedProject(null)}
-                className="absolute top-4 right-4 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 transition-all"
+                className="absolute top-4 right-4 bg-white bg-opacity-90 hover:bg-opacity-100 rounded-full p-2 transition-all shadow-md z-10"
               >
                 <X className="text-gray-900" size={24} />
               </button>
-              <div className="text-6xl opacity-90">
+              <div className="text-6xl opacity-90 animate-bounce-slow">
                 {portfolioItems[selectedProject].emoji}
               </div>
             </div>
@@ -231,21 +253,29 @@ export function Portfolio() {
                 {portfolioItems[selectedProject].content}
               </p>
 
-              {/* Gallery Section */}
+              {/* Gallery Section - Masonry Layout */}
               {portfolioItems[selectedProject].gallery && portfolioItems[selectedProject].gallery.length > 0 && (
                 <div className="mb-8">
                   <h3 className="text-lg font-bold text-gray-900 mb-4">Gallery</h3>
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                  <div className="columns-2 sm:columns-3 gap-4 space-y-4">
                     {portfolioItems[selectedProject].gallery.map((image, idx) => (
-                      <img
+                      <div
                         key={idx}
-                        src={image}
-                        alt={`Gallery image ${idx + 1}`}
-                        className="w-full h-32 sm:h-40 object-cover rounded-lg border-2 border-purple-200 hover:border-purple-500 transition-all cursor-pointer"
-                        onError={(e) => {
-                          e.currentTarget.style.display = 'none';
-                        }}
-                      />
+                        className="break-inside-avoid relative group cursor-zoom-in overflow-hidden rounded-lg border border-gray-100"
+                        onClick={(e) => handleImageClick(image, e)}
+                      >
+                        <img
+                          src={image}
+                          alt={`Gallery image ${idx + 1}`}
+                          className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                          onError={(e) => {
+                            e.currentTarget.style.display = 'none';
+                          }}
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                          <span className="text-white text-sm font-medium bg-black bg-opacity-50 px-3 py-1 rounded-full">View</span>
+                        </div>
+                      </div>
                     ))}
                   </div>
                 </div>
@@ -257,17 +287,25 @@ export function Portfolio() {
                   {portfolioItems[selectedProject].subcategories.map((subcategory, subIdx) => (
                     <div key={subIdx} className="mb-8">
                       <h3 className="text-lg font-bold text-gray-900 mb-4">{subcategory.name}</h3>
-                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                      <div className="columns-2 sm:columns-3 gap-4 space-y-4">
                         {subcategory.gallery.map((image, idx) => (
-                          <img
+                          <div
                             key={idx}
-                            src={image}
-                            alt={`${subcategory.name} ${idx + 1}`}
-                            className="w-full h-32 sm:h-40 object-cover rounded-lg border-2 border-purple-200 hover:border-purple-500 transition-all cursor-pointer"
-                            onError={(e) => {
-                              e.currentTarget.style.display = 'none';
-                            }}
-                          />
+                            className="break-inside-avoid relative group cursor-zoom-in overflow-hidden rounded-lg border border-gray-100"
+                            onClick={(e) => handleImageClick(image, e)}
+                          >
+                            <img
+                              src={image}
+                              alt={`${subcategory.name} ${idx + 1}`}
+                              className="w-full h-auto object-contain transition-transform duration-300 group-hover:scale-105"
+                              onError={(e) => {
+                                e.currentTarget.style.display = 'none';
+                              }}
+                            />
+                            <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-20 transition-all flex items-center justify-center opacity-0 group-hover:opacity-100">
+                              <span className="text-white text-sm font-medium bg-black bg-opacity-50 px-3 py-1 rounded-full">View</span>
+                            </div>
+                          </div>
                         ))}
                       </div>
                     </div>
@@ -331,6 +369,28 @@ export function Portfolio() {
               </button>
             </div>
           </div>
+        </div>
+      )}
+
+      {/* Lightbox Modal */}
+      {selectedImage && (
+        <div
+          className="fixed inset-0 bg-black bg-opacity-90 z-[60] flex items-center justify-center p-4 backdrop-blur-sm"
+          onClick={() => setSelectedImage(null)}
+        >
+          <button
+            onClick={() => setSelectedImage(null)}
+            className="absolute top-4 right-4 bg-white/10 hover:bg-white/20 text-white rounded-full p-3 transition-all"
+          >
+            <X size={32} />
+          </button>
+
+          <img
+            src={selectedImage}
+            alt="Full screen view"
+            className="max-w-full max-h-[90vh] object-contain rounded-lg shadow-2xl"
+            onClick={(e) => e.stopPropagation()}
+          />
         </div>
       )}
     </>
