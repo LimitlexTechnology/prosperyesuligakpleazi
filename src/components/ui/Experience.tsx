@@ -86,58 +86,60 @@ export function Experience() {
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white">
+    <section id="experience" className="py-16 sm:py-20 lg:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Professional Experience
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-500 mx-auto"></div>
+          <div className="flex justify-center">
+            <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+          </div>
         </div>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           {experiences.map((exp, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-100 hover:shadow-lg transition-all duration-300"
+              className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 sm:p-8 rounded-xl border border-purple-100 hover:border-purple-300 hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-4">
+              <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3 sm:gap-4 mb-4">
                 <div className="flex-1">
                   <div className="flex items-center gap-3 mb-2">
-                    <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg flex items-center justify-center">
+                    <div className="w-10 h-10 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center flex-shrink-0">
                       <Briefcase className="text-white" size={20} />
                     </div>
-                    <div>
-                      <h3 className="text-xl font-bold text-gray-900">
+                    <div className="min-w-0">
+                      <h3 className="text-lg sm:text-xl font-bold text-gray-900 leading-tight">
                         {exp.title}
                       </h3>
-                      <p className="text-purple-600 font-medium">{exp.company}</p>
+                      <p className="text-sm sm:text-base text-purple-600 font-medium">{exp.company}</p>
                     </div>
                   </div>
                 </div>
-                <div className="flex flex-col gap-2 lg:text-right">
-                  <div className="flex items-center gap-2 lg:justify-end">
-                    <Calendar size={16} className="text-purple-600" />
-                    <span className="text-sm text-gray-700 font-medium">
-                      {exp.period}
-                    </span>
-                    {exp.current && (
-                      <span className="bg-gradient-to-r from-purple-600 to-purple-500 text-white text-xs px-3 py-1 rounded-full">
-                        Current
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-2 lg:justify-end text-gray-600">
-                    <MapPin size={14} />
-                    <span className="text-sm">{exp.location}</span>
-                  </div>
-                </div>
+                {exp.current && (
+                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs px-3 py-1 rounded-full whitespace-nowrap h-fit">
+                    Current
+                  </span>
+                )}
               </div>
-              <ul className="space-y-2 pl-14">
+              <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 text-xs sm:text-sm text-gray-600 mb-4 sm:mb-5">
+                <div className="flex items-center gap-2">
+                  <Calendar size={16} className="text-purple-600 flex-shrink-0" />
+                  <span>{exp.period}</span>
+                </div>
+                {exp.location && (
+                  <div className="flex items-center gap-2">
+                    <MapPin size={16} className="text-purple-600 flex-shrink-0" />
+                    <span>{exp.location}</span>
+                  </div>
+                )}
+              </div>
+              <ul className="space-y-2">
                 {exp.description.map((item, idx) => (
-                  <li key={idx} className="text-gray-600 text-sm flex items-start gap-2">
-                    <span className="text-purple-600 mt-1">•</span>
-                    <span>{item}</span>
+                  <li key={idx} className="text-gray-700 text-sm sm:text-base flex items-start gap-3">
+                    <span className="text-purple-600 font-bold flex-shrink-0">•</span>
+                    <span className="leading-relaxed">{item}</span>
                   </li>
                 ))}
               </ul>

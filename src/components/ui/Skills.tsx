@@ -97,13 +97,13 @@ export function Skills() {
                   {category.title}
                 </h3>
               </div>
-              <ul className="space-y-3">
+              <ul className="space-y-2 sm:space-y-3">
                 {category.skills.map((skill, idx) => (
                   <li
                     key={idx}
-                    className="flex items-start gap-2 text-gray-700"
+                    className="flex items-start gap-2 text-xs sm:text-sm text-gray-700"
                   >
-                    <span className="text-purple-600 mt-1 font-bold">✓</span>
+                    <span className="text-purple-600 mt-1 font-bold flex-shrink-0">✓</span>
                     <span>{skill}</span>
                   </li>
                 ))}
@@ -113,29 +113,31 @@ export function Skills() {
         </div>
 
         {/* Awards Section */}
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Honors & Awards
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-500 mx-auto"></div>
+          <div className="flex justify-center">
+            <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {awards.map((award, index) => (
             <div
               key={index}
-              className="bg-gradient-to-br from-purple-50 to-pink-50 p-6 rounded-xl border border-purple-100 hover:shadow-lg transition-all duration-300 text-center"
+              className="bg-gradient-to-br from-purple-50 to-pink-50 p-5 sm:p-6 rounded-xl border border-purple-100 hover:border-purple-300 hover:shadow-lg transition-all duration-300 text-center"
             >
-              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-500 rounded-full flex items-center justify-center mx-auto mb-4">
+              <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-full flex items-center justify-center mx-auto mb-4">
                 <Trophy className="text-white" size={24} />
               </div>
               <span className="inline-block bg-purple-200 text-purple-800 text-xs px-3 py-1 rounded-full mb-3 font-medium">
                 {award.year}
               </span>
-              <h3 className="text-lg font-bold text-gray-900 mb-2">
+              <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-2 leading-snug">
                 {award.title}
               </h3>
-              <p className="text-sm text-gray-600">
+              <p className="text-xs sm:text-sm text-gray-600">
                 {award.organization}
               </p>
             </div>

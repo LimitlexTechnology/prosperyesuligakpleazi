@@ -26,38 +26,40 @@ export function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-br from-purple-100 via-pink-50 to-cyan-100">
+    <section id="contact" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-purple-100 via-pink-50 to-cyan-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Let's Connect
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-700 max-w-2xl mx-auto">
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+          </div>
+          <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto px-2">
             I'm always open to new opportunities and collaborations. 
             Feel free to reach out if you'd like to work together!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
           {/* Contact Information */}
-          <div className="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 sm:mb-8">
               Contact Information
             </h3>
-            <div className="space-y-6">
+            <div className="space-y-4 sm:space-y-6">
               <a
                 href="mailto:prosperyesulig@gmail.com"
                 className="flex items-start gap-4 p-4 rounded-lg hover:bg-purple-50 transition-colors group"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Mail className="text-white" size={20} />
                   </div>
                 </div>
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">Email</p>
-                  <p className="text-gray-900 font-medium">prosperyesulig@gmail.com</p>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm text-gray-500 mb-1">Email</p>
+                  <p className="text-sm sm:text-base text-gray-900 font-medium break-all">prosperyesulig@gmail.com</p>
                 </div>
               </a>
 
@@ -66,26 +68,26 @@ export function Contact() {
                 className="flex items-start gap-4 p-4 rounded-lg hover:bg-purple-50 transition-colors group"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Phone className="text-white" size={20} />
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">Phone</p>
-                  <p className="text-gray-900 font-medium">+233 543 131 455</p>
+                  <p className="text-xs sm:text-sm text-gray-500 mb-1">Phone</p>
+                  <p className="text-sm sm:text-base text-gray-900 font-medium">+233 543 131 455</p>
                 </div>
               </a>
 
               <div className="flex items-start gap-4 p-4 rounded-lg">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
                     <MapPin className="text-white" size={20} />
                   </div>
                 </div>
-                <div>
-                  <p className="text-sm text-gray-500 mb-1">Location</p>
-                  <p className="text-gray-900 font-medium">Sapeiman, Ga West, Ghana</p>
-                  <p className="text-sm text-gray-600 mt-1">Digital Address: GW-0063-6235</p>
+                <div className="min-w-0">
+                  <p className="text-xs sm:text-sm text-gray-500 mb-1">Location</p>
+                  <p className="text-sm sm:text-base text-gray-900 font-medium">Sapeiman, Ga West, Ghana</p>
+                  <p className="text-xs sm:text-sm text-gray-600 mt-1">Digital Address: GW-0063-6235</p>
                 </div>
               </div>
 
@@ -96,28 +98,28 @@ export function Contact() {
                 className="flex items-start gap-4 p-4 rounded-lg hover:bg-purple-50 transition-colors group"
               >
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center group-hover:scale-110 transition-transform">
                     <Linkedin className="text-white" size={20} />
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm text-gray-500 mb-1">LinkedIn</p>
-                  <p className="text-gray-900 font-medium">prosper-yesuli-gakpleazi</p>
+                  <p className="text-xs sm:text-sm text-gray-500 mb-1">LinkedIn</p>
+                  <p className="text-sm sm:text-base text-gray-900 font-medium">prosper-yesuli-gakpleazi</p>
                 </div>
               </a>
             </div>
           </div>
 
           {/* Contact Form */}
-          <div className="bg-white p-8 rounded-2xl shadow-xl">
-            <h3 className="text-2xl font-bold text-gray-900 mb-8">
+          <div className="bg-white p-6 sm:p-8 rounded-2xl shadow-lg">
+            <h3 className="text-2xl font-bold text-gray-900 mb-6 sm:mb-8">
               Send a Message
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-6">
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               <div>
                 <label
                   htmlFor="name"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
                 >
                   Your Name
                 </label>
@@ -128,7 +130,7 @@ export function Contact() {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all"
                   placeholder="John Doe"
                 />
               </div>
@@ -136,7 +138,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="email"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
                 >
                   Your Email
                 </label>
@@ -147,7 +149,7 @@ export function Contact() {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all"
                   placeholder="john@example.com"
                 />
               </div>
@@ -155,7 +157,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="subject"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
                 >
                   Subject
                 </label>
@@ -166,7 +168,7 @@ export function Contact() {
                   value={formData.subject}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all"
                   placeholder="What is this about?"
                 />
               </div>
@@ -174,7 +176,7 @@ export function Contact() {
               <div>
                 <label
                   htmlFor="message"
-                  className="block text-sm font-medium text-gray-700 mb-2"
+                  className="block text-xs sm:text-sm font-medium text-gray-700 mb-2"
                 >
                   Message
                 </label>
@@ -185,14 +187,14 @@ export function Contact() {
                   onChange={handleChange}
                   required
                   rows={5}
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all resize-none"
+                  className="w-full px-3 sm:px-4 py-2 sm:py-3 text-sm sm:text-base border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-600 focus:border-transparent outline-none transition-all resize-none"
                   placeholder="Tell me about your project..."
                 />
               </div>
 
               <button
                 type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-purple-500 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-purple-600 transition-all flex items-center justify-center gap-2 shadow-lg"
+                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all flex items-center justify-center gap-2 shadow-lg text-sm sm:text-base"
               >
                 Send Message
                 <Send size={18} />
@@ -203,8 +205,8 @@ export function Contact() {
       </div>
 
       {/* Footer */}
-      <div className="mt-20 pt-8 border-t border-purple-200">
-        <p className="text-center text-gray-700">
+      <div className="mt-12 sm:mt-20 pt-6 sm:pt-8 border-t border-purple-200">
+        <p className="text-center text-sm sm:text-base text-gray-700">
           © {new Date().getFullYear()} Prosper Yesuli Gakpleazi. All rights reserved.
         </p>
       </div>

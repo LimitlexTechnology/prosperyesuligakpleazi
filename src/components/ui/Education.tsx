@@ -57,70 +57,68 @@ export function Education() {
   ];
 
   return (
-    <section id="education" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="education" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Education & Certifications
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-500 mx-auto"></div>
+          <div className="flex justify-center">
+            <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+          </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {education.map((edu, index) => (
             <div
               key={index}
-              className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300 border border-purple-100"
+              className="bg-white p-6 sm:p-8 rounded-xl shadow-md hover:shadow-lg hover:border-purple-300 transition-all duration-300 border border-purple-100"
             >
-              <div className="flex items-start gap-4">
+              <div className="flex items-start gap-4 mb-4">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-purple-500 rounded-lg flex items-center justify-center">
+                  <div className="w-12 h-12 bg-gradient-to-br from-purple-600 to-pink-600 rounded-lg flex items-center justify-center">
                     <GraduationCap className="text-white" size={24} />
                   </div>
                 </div>
-                <div className="flex-1">
-                  <div className="flex items-center gap-2 mb-2 flex-wrap">
-                    <Calendar size={16} className="text-purple-600" />
-                    <span className="text-sm text-purple-600 font-medium">
-                      {edu.period}
-                    </span>
-                    {edu.current && (
-                      <span className="bg-gradient-to-r from-purple-600 to-purple-500 text-white text-xs px-3 py-1 rounded-full">
-                        In Progress
-                      </span>
-                    )}
-                  </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <div className="flex-1 min-w-0">
+                  <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-1 break-words">
                     {edu.degree}
                   </h3>
-                  <p className="text-gray-700 font-medium mb-1">
+                  <p className="text-sm sm:text-base text-gray-700 font-medium mb-1">
                     {edu.institution}
                   </p>
-                  <p className="text-gray-600 text-sm mb-3">{edu.location}</p>
-                  
                   {edu.gpa && (
-                    <div className="flex items-center gap-2 mb-2">
-                      <Award size={16} className="text-purple-600" />
-                      <span className="text-sm text-gray-700 font-medium">
-                        CGPA: {edu.gpa}
-                      </span>
-                    </div>
-                  )}
-                  
-                  {edu.details && (
-                    <ul className="space-y-1 mt-3">
-                      {edu.details.map((detail, idx) => (
-                        <li
-                          key={idx}
-                          className="text-sm text-gray-600 pl-4 border-l-2 border-purple-300"
-                        >
-                          {detail}
-                        </li>
-                      ))}
-                    </ul>
+                    <span className="text-xs text-purple-600 font-semibold">
+                      CGPA: {edu.gpa}
+                    </span>
                   )}
                 </div>
               </div>
+              
+              <div className="flex items-center gap-2 mb-3 text-xs sm:text-sm">
+                <Calendar size={16} className="text-purple-600 flex-shrink-0" />
+                <span className="text-gray-600">{edu.period}</span>
+                {edu.current && (
+                  <span className="bg-gradient-to-r from-purple-600 to-pink-600 text-white text-xs px-2 py-0.5 rounded-full whitespace-nowrap">
+                    Current
+                  </span>
+                )}
+              </div>
+              
+              <p className="text-xs sm:text-sm text-gray-600 mb-4">{edu.location}</p>
+              
+              {edu.details && (
+                <ul className="space-y-2">
+                  {edu.details.map((detail, idx) => (
+                    <li
+                      key={idx}
+                      className="text-xs sm:text-sm text-gray-600 pl-3 border-l-2 border-purple-300 leading-relaxed"
+                    >
+                      {detail}
+                    </li>
+                  ))}
+                </ul>
+              )}
             </div>
           ))}
         </div>

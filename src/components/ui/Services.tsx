@@ -78,43 +78,45 @@ export function Services() {
   ];
 
   return (
-    <section id="services" className="py-20 bg-gradient-to-br from-purple-50 to-pink-50">
+    <section id="services" className="py-16 sm:py-20 lg:py-24 bg-gradient-to-br from-purple-50 to-pink-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Services I Offer
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-purple-600 to-purple-500 mx-auto mb-6"></div>
-          <p className="text-lg text-gray-700 max-w-3xl mx-auto">
+          <div className="flex justify-center mb-6">
+            <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
+          </div>
+          <p className="text-base sm:text-lg text-gray-700 max-w-3xl mx-auto px-2">
             Comprehensive solutions across technology, design, education, and administration. 
             Let's work together to bring your vision to life.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {services.map((service, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-2xl transition-all duration-300 group border border-purple-100"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-lg hover:border-purple-300 transition-all duration-300 group border border-purple-100"
             >
-              <div className={`h-32 bg-gradient-to-br ${service.color} flex items-center justify-center relative overflow-hidden`}>
+              <div className={`h-32 sm:h-40 bg-gradient-to-br ${service.color} flex items-center justify-center relative overflow-hidden`}>
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity"></div>
                 <service.icon className="text-white z-10 group-hover:scale-110 transition-transform" size={48} />
               </div>
-              <div className="p-6">
-                <h3 className="text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
+              <div className="p-5 sm:p-6">
+                <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 group-hover:text-purple-600 transition-colors">
                   {service.title}
                 </h3>
-                <p className="text-gray-600 mb-4 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 mb-4 leading-relaxed">
                   {service.description}
                 </p>
                 <ul className="space-y-2">
                   {service.features.map((feature, idx) => (
                     <li
                       key={idx}
-                      className="flex items-start gap-2 text-sm text-gray-700"
+                      className="flex items-start gap-2 text-xs sm:text-sm text-gray-700"
                     >
-                      <span className="text-purple-600 mt-0.5 font-bold">✓</span>
+                      <span className="text-purple-600 mt-0.5 font-bold flex-shrink-0">✓</span>
                       <span>{feature}</span>
                     </li>
                   ))}
