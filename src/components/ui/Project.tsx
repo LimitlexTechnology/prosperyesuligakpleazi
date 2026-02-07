@@ -14,13 +14,13 @@ export function Portfolio() {
       emoji: '📚',
       content: 'Educational Technology has revolutionized how students learn and interact with course material. I have developed and implemented AI-enabled learning platforms that provide personalized learning experiences, adapting to each student\'s pace and learning style. These platforms integrate advanced technologies such as machine learning algorithms and interactive simulations to enhance student engagement. I have also designed comprehensive STEM curricula that emphasize hands-on, project-based learning approaches. My work includes creating digital learning modules, developing assessment tools, and training educators on technology integration. The impact includes measurable improvements in student outcomes, increased engagement, and development of critical 21st-century skills. These initiatives bridge the gap between traditional education and modern technology, preparing students for careers in STEM fields.',
       demoUrl: '',
-      imageUrl: '/Educational Technology/images/project.jpg',
+      imageUrl: 'Educational Technology/images/project.jpg',
       videoUrl: '',
       githubUrl: '',
       gallery: [
-        '/Educational Technology/images/screenshot1.jpg',
-        '/Educational Technology/images/screenshot2.jpg',
-        '/Educational Technology/images/screenshot3.jpg',
+        'Educational Technology/images/screenshot1.jpg',
+        'Educational Technology/images/screenshot2.jpg',
+        'Educational Technology/images/screenshot3.jpg',
       ],
     },
     {
@@ -39,54 +39,54 @@ export function Portfolio() {
         {
           name: 'Brand & Visual Communication',
           gallery: [
-            '/Graphic Design/images/Brand & Visual Communication/Empowerlife logo signage mockup.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/Nalisa Logo mockup.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/THE WAY ELECTRICALS-1.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/NPA Bus Mockup.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/Card Excel MOCK.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/DonnieJosh Logo Mockup.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/Eden MOCKUP.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/Excel car branding.jpg',
-            '/Graphic Design/images/Brand & Visual Communication/Growelb One Vision mockup.jpg',
+            'Graphic Design/images/Brand & Visual Communication/Empowerlife logo signage mockup.jpg',
+            'Graphic Design/images/Brand & Visual Communication/Nalisa Logo mockup.jpg',
+            'Graphic Design/images/Brand & Visual Communication/THE WAY ELECTRICALS-1.jpg',
+            'Graphic Design/images/Brand & Visual Communication/NPA Bus Mockup.jpg',
+            'Graphic Design/images/Brand & Visual Communication/Card Excel MOCK.jpg',
+            'Graphic Design/images/Brand & Visual Communication/DonnieJosh Logo Mockup.jpg',
+            'Graphic Design/images/Brand & Visual Communication/Eden MOCKUP.jpg',
+            'Graphic Design/images/Brand & Visual Communication/Excel car branding.jpg',
+            'Graphic Design/images/Brand & Visual Communication/Growelb One Vision mockup.jpg',
           ],
         },
         {
           name: 'Print & Publication Design',
           gallery: [
-            '/Graphic Design/images/Print & Publication Design/Augustina Banner.jpg',
-            '/Graphic Design/images/Print & Publication Design/Naa Pullup.jpg',
-            '/Graphic Design/images/Print & Publication Design/Vipex Signage.jpg',
-            '/Graphic Design/images/Print & Publication Design/Victor Pullup Mock.jpg',
-            '/Graphic Design/images/Print & Publication Design/Ohemaa Kitchen Flyer.jpg',
-            '/Graphic Design/images/Print & Publication Design/NisiaNaya Freight Flyer.jpg',
-            '/Graphic Design/images/Print & Publication Design/JKT Broadcast.jpg',
-            '/Graphic Design/images/Print & Publication Design/Global Heatwave Main.jpg',
-            '/Graphic Design/images/Print & Publication Design/CITATION MOCKUP.jpg',
-            '/Graphic Design/images/Print & Publication Design/A2 STICKER.jpg',
+            'Graphic Design/images/Print & Publication Design/Augustina Banner.jpg',
+            'Graphic Design/images/Print & Publication Design/Naa Pullup.jpg',
+            'Graphic Design/images/Print & Publication Design/Vipex Signage.jpg',
+            'Graphic Design/images/Print & Publication Design/Victor Pullup Mock.jpg',
+            'Graphic Design/images/Print & Publication Design/Ohemaa Kitchen Flyer.jpg',
+            'Graphic Design/images/Print & Publication Design/NisiaNaya Freight Flyer.jpg',
+            'Graphic Design/images/Print & Publication Design/JKT Broadcast.jpg',
+            'Graphic Design/images/Print & Publication Design/Global Heatwave Main.jpg',
+            'Graphic Design/images/Print & Publication Design/CITATION MOCKUP.jpg',
+            'Graphic Design/images/Print & Publication Design/A2 STICKER.jpg',
           ],
         },
         {
           name: 'Product & Packaging Design',
           gallery: [
-            '/Graphic Design/images/Product & Packaging Design/Crystal Hairs Packaging.jpg',
-            '/Graphic Design/images/Product & Packaging Design/Naya Shea Butter.jpg',
-            '/Graphic Design/images/Product & Packaging Design/Naya Tombrown.jpg',
-            '/Graphic Design/images/Product & Packaging Design/Naya Groundnut.jpg',
-            '/Graphic Design/images/Product & Packaging Design/Detox 5inX3in.jpg',
-            '/Graphic Design/images/Product & Packaging Design/3 x 4.5 Groundnut.jpg',
-            '/Graphic Design/images/Product & Packaging Design/CFS 10cm by 6cm.png',
-            '/Graphic Design/images/Product & Packaging Design/N Tigernut.jpg',
+            'Graphic Design/images/Product & Packaging Design/Crystal Hairs Packaging.jpg',
+            'Graphic Design/images/Product & Packaging Design/Naya Shea Butter.jpg',
+            'Graphic Design/images/Product & Packaging Design/Naya Tombrown.jpg',
+            'Graphic Design/images/Product & Packaging Design/Naya Groundnut.jpg',
+            'Graphic Design/images/Product & Packaging Design/Detox 5inX3in.jpg',
+            'Graphic Design/images/Product & Packaging Design/3 x 4.5 Groundnut.jpg',
+            'Graphic Design/images/Product & Packaging Design/CFS 10cm by 6cm.png',
+            'Graphic Design/images/Product & Packaging Design/N Tigernut.jpg',
           ],
         },
         {
           name: 'Apparel & Merchandise',
           gallery: [
-            '/Graphic Design/images/t-shirt-printing/6th White.jpg',
-            '/Graphic Design/images/t-shirt-printing/Charitable Shirt Mockup 1.jpg',
-            '/Graphic Design/images/t-shirt-printing/Charitable Shirt Mockup 2.jpg',
-            '/Graphic Design/images/t-shirt-printing/Donniejosh Shirt Mockup 2.jpg',
-            '/Graphic Design/images/t-shirt-printing/Naya shirt.jpg',
-            '/Graphic Design/images/t-shirt-printing/Warriors Gold.jpg',
+            'Graphic Design/images/t-shirt-printing/6th White.jpg',
+            'Graphic Design/images/t-shirt-printing/Charitable Shirt Mockup 1.jpg',
+            'Graphic Design/images/t-shirt-printing/Charitable Shirt Mockup 2.jpg',
+            'Graphic Design/images/t-shirt-printing/Donniejosh Shirt Mockup 2.jpg',
+            'Graphic Design/images/t-shirt-printing/Naya shirt.jpg',
+            'Graphic Design/images/t-shirt-printing/Warriors Gold.jpg',
           ]
         }
       ],
@@ -99,34 +99,34 @@ export function Portfolio() {
       emoji: '💻',
       content: 'I develop modern, responsive web applications using cutting-edge front-end technologies including React, HTML5, CSS3, and JavaScript. My approach emphasizes clean, maintainable code architecture and user-centric design principles. I have built full-stack educational platforms, e-commerce solutions, and content management systems. Each project prioritizes responsive design to ensure seamless experiences across desktop, tablet, and mobile devices. I utilize modern development tools and frameworks like Tailwind CSS for rapid prototyping and deployment. My work includes API integration, state management with React hooks, and optimization for performance and accessibility. I stay current with emerging technologies and best practices in web development, continuously improving my skills through certifications and hands-on projects. My commitment to excellence ensures that every web application I develop is scalable, maintainable, and delivers exceptional user experiences.',
       demoUrl: '',
-      imageUrl: '/Web Development/images/csa_hub.png',
+      imageUrl: 'Web Development/images/csa_hub.png',
       videoUrl: '',
       githubUrl: '',
       gallery: [
-        '/Web Development/images/csa_hub.png',
-        '/Web Development/images/screenshot2.jpg',
-        '/Web Development/images/screenshot3.jpg',
+        'Web Development/images/csa_hub.png',
+        'Web Development/images/screenshot2.jpg',
+        'Web Development/images/screenshot3.jpg',
       ],
       projects: [
         {
           title: 'Climate Smart Agriculture Hub (CSA HUB)',
           type: 'Web Application',
           description: 'Future-Proof Your Farm: Empowering the next generation of farmers with real-time climate intelligence and sustainable practices.',
-          image: '/Web Development/images/csa_hub.png',
+          image: 'Web Development/images/csa_hub.png',
           link: '#'
         },
         {
           title: 'Mount Kenya Wildlife Conservancy',
           type: 'Website',
           description: 'A non-profit trust dedicated to preserving the environment and the wildlife within.',
-          image: '/Web Development/images/screenshot2.jpg',
+          image: 'Web Development/images/screenshot2.jpg',
           link: '#'
         },
         {
           title: 'Sustainable Tech Solutions',
           type: 'Corporate Website',
           description: 'Leading the way in eco-friendly technology implementation for modern businesses.',
-          image: '/Web Development/images/screenshot3.jpg',
+          image: 'Web Development/images/screenshot3.jpg',
           link: '#'
         }
       ]
@@ -139,14 +139,14 @@ export function Portfolio() {
       emoji: '🌍',
       content: 'My environmental work combines geographic expertise with advocacy for sustainability and conservation. A flagship initiative I successfully undertook is the "Clean & Green Environmental Project" at Mirekua International Community School (MICS). Themed "Greening Today, Sustaining Tomorrow," this project provided learners with a practical application of classroom theory while raising awareness about good sanitation and its health benefits. Activities included a community clean-up exercise covering the Sarpeiman-Ablorman-Opah-China Mall route, public education on environmental health, and direct engagement with residents. I also conduct research on environmental challenges including waste management and climate change impacts, such as my study on "Household Solid Waste Management Practices at Nima and Mamobi, Accra." I utilize GIS technology for spatial analysis to inform conservation strategies and work with organizations to develop sustainability strategies that balance development needs with conservation goals.',
       demoUrl: '',
-      imageUrl: '/Environmental Projects/images/clean_and_green_flyer.jpg',
+      imageUrl: 'Environmental Projects/images/clean_and_green_flyer.jpg',
       videoUrl: 'https://www.linkedin.com/posts/prosper-yesuli-gakpleazi_environmentalleadership-sustainability-stewardship-activity-7398170649623564288-9FYo?utm_source=share&utm_medium=member_desktop&rcm=ACoAAC3_QPIBCPszUSDddRFmduJveUAI3aPFPoA',
       embedUrl: 'https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7398170546133262337?compact=1',
       githubUrl: '',
       gallery: [
-        '/Environmental Projects/images/project1.jpg',
-        '/Environmental Projects/images/project2.jpg',
-        '/Environmental Projects/images/project3.jpg',
+        'Environmental Projects/images/project1.jpg',
+        'Environmental Projects/images/project2.jpg',
+        'Environmental Projects/images/project3.jpg',
       ],
     },
     {
@@ -157,13 +157,13 @@ export function Portfolio() {
       emoji: '📊',
       content: 'I provide comprehensive administrative and operational solutions that streamline business processes and drive organizational efficiency. My expertise includes workflow optimization, where I analyze current processes and implement improvements that reduce redundancy and increase productivity. I design digital transformation strategies that help organizations leverage technology for better operations. My work includes implementing integrated systems for document management, scheduling, communication, and reporting. I have successfully coordinated complex projects, managed stakeholder relationships, and ensured smooth execution of organizational objectives. My experience in operations management includes staff coordination, compliance management, and quality assurance. I excel at identifying inefficiencies and developing solutions that enhance operational excellence. By combining strategic thinking with practical implementation, I help organizations achieve their operational goals while improving employee satisfaction and reducing costs.',
       demoUrl: '',
-      imageUrl: '/Administrative Solutions/images/project.jpg',
+      imageUrl: 'Administrative Solutions/images/project.jpg',
       videoUrl: '',
       githubUrl: '',
       gallery: [
-        '/Administrative Solutions/images/workflow1.jpg',
-        '/Administrative Solutions/images/workflow2.jpg',
-        '/Administrative Solutions/images/workflow3.jpg',
+        'Administrative Solutions/images/workflow1.jpg',
+        'Administrative Solutions/images/workflow2.jpg',
+        'Administrative Solutions/images/workflow3.jpg',
       ],
     },
     {
@@ -174,13 +174,13 @@ export function Portfolio() {
       emoji: '📱',
       content: 'I develop and execute comprehensive social media campaigns that build brand awareness, engage audiences, and drive measurable results. My approach combines strategic content planning with creative execution across multiple platforms including Facebook, Instagram, Twitter, and LinkedIn. I create compelling visual content, including graphics and videos, that resonates with target audiences. My work includes developing content calendars, managing community engagement, and analyzing performance metrics to optimize campaign effectiveness. I have managed social media for educational institutions and environmental organizations, building engaged communities around sustainability and learning. My campaigns emphasize storytelling that connects emotionally with audiences while aligning with organizational goals. I stay current with social media trends and platform algorithm changes to ensure maximum reach and engagement. Each campaign is data-driven, with clear KPIs and regular optimization based on performance analytics. My comprehensive approach to social media management helps organizations build authentic connections with their audiences and achieve marketing objectives.',
       demoUrl: '',
-      imageUrl: '/Social Media Campaigns/images/project.jpg',
+      imageUrl: 'Social Media Campaigns/images/project.jpg',
       videoUrl: '',
       githubUrl: '',
       gallery: [
-        '/Social Media Campaigns/images/campaign1.jpg',
-        '/Social Media Campaigns/images/campaign2.jpg',
-        '/Social Media Campaigns/images/campaign3.jpg',
+        'Social Media Campaigns/images/campaign1.jpg',
+        'Social Media Campaigns/images/campaign2.jpg',
+        'Social Media Campaigns/images/campaign3.jpg',
       ],
     },
   ];
@@ -304,9 +304,9 @@ export function Portfolio() {
                   <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
                     {/* Left: Flyer Image */}
                     <div className="relative rounded-2xl overflow-hidden shadow-lg border border-gray-100 group cursor-zoom-in"
-                      onClick={(e) => handleImageClick('/Environmental Projects/images/clean_and_green_flyer.jpg', e)}>
+                      onClick={(e) => handleImageClick('Environmental Projects/images/clean_and_green_flyer.jpg', e)}>
                       <img
-                        src="/Environmental Projects/images/clean_and_green_flyer.jpg"
+                        src="Environmental Projects/images/clean_and_green_flyer.jpg"
                         alt="Clean & Green Flyer"
                         className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-105"
                       />
