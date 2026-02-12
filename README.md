@@ -20,7 +20,7 @@ A modern, responsive portfolio website showcasing professional experience, skill
 - **Language:** TypeScript 5.2
 - **Styling:** Tailwind CSS 3.3
 - **Icons:** Lucide React
-- **Deployment:** GitHub Pages
+- **Deployment:** Vercel
 
 ## 📦 Installation
 
@@ -110,7 +110,34 @@ Create a new component in `src/components/ui/` and import it in `App.tsx`
 
 ## 🌐 Deployment
 
+### Vercel (Recommended)
+
+This project is deployed on Vercel for optimal performance and automatic deployments.
+
+1. **Install Vercel CLI** (optional)
+   ```bash
+   npm install -g vercel
+   ```
+
+2. **Deploy via Vercel Dashboard**
+   - Push your code to GitHub
+   - Import the repository at [vercel.com](https://vercel.com)
+   - Vercel will auto-detect Vite and configure build settings
+   - Click "Deploy"
+
+3. **Deploy via CLI**
+   ```bash
+   vercel
+   ```
+
+**Build Settings:**
+- Build Command: `npm run build`
+- Output Directory: `dist`
+- Install Command: `npm install`
+
 ### GitHub Pages
+
+Alternatively, deploy to GitHub Pages:
 
 1. **Build the project**
    ```bash
@@ -124,9 +151,9 @@ Create a new component in `src/components/ui/` and import it in `App.tsx`
 ### Other Platforms
 
 The built files in the `dist` folder can be deployed to:
-- Vercel
 - Netlify
 - AWS S3
+- Cloudflare Pages
 - Any static hosting service
 
 ## 📱 Browser Support
