@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Mail, Phone, MapPin, Linkedin, Send } from 'lucide-react';
+import { Mail, Phone, MapPin, Linkedin, Send, MessageCircle } from 'lucide-react';
 
 export function Contact() {
   const [formData, setFormData] = useState({
@@ -9,10 +9,36 @@ export function Contact() {
     message: '',
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleWhatsAppSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Form submitted:', formData);
-    alert('Thank you for your message! I will get back to you soon.');
+
+    // Format message for WhatsApp
+    const whatsappMessage = `Hello! I'm ${formData.name}%0A%0A*Subject:* ${formData.subject}%0A%0A*Message:*%0A${formData.message}%0A%0A*My Email:* ${formData.email}`;
+
+    // WhatsApp link (remove + and spaces from phone number)
+    const whatsappNumber = '233543131455';
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${whatsappMessage}`;
+
+    // Open WhatsApp in new tab
+    window.open(whatsappUrl, '_blank');
+
+    // Reset form
+    setFormData({ name: '', email: '', subject: '', message: '' });
+  };
+
+  const handleEmailSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+
+    // Format message for Email
+    const emailBody = `Hello,%0D%0A%0D%0AI'm ${formData.name}%0D%0A%0D%0AMessage:%0D%0A${formData.message}%0D%0A%0D%0AMy Email: ${formData.email}`;
+
+    // Email mailto link
+    const mailtoUrl = `mailto:prosperyesulig@gmail.com?subject=${encodeURIComponent(formData.subject)}&body=${emailBody}`;
+
+    // Open email client
+    window.location.href = mailtoUrl;
+
+    // Reset form
     setFormData({ name: '', email: '', subject: '', message: '' });
   };
 
@@ -36,7 +62,7 @@ export function Contact() {
             <div className="w-16 h-1 bg-gradient-to-r from-purple-600 to-pink-600 rounded-full"></div>
           </div>
           <p className="text-base sm:text-lg text-gray-700 max-w-2xl mx-auto px-2">
-            I'm always open to new opportunities and collaborations. 
+            I'm always open to new opportunities and collaborations.
             Feel free to reach out if you'd like to work together!
           </p>
         </div>
@@ -115,7 +141,7 @@ export function Contact() {
             <h3 className="text-2xl font-bold text-gray-900 mb-6 sm:mb-8">
               Send a Message
             </h3>
-            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+            <form className="space-y-4 sm:space-y-6">
               <div>
                 <label
                   htmlFor="name"
@@ -192,13 +218,29 @@ export function Contact() {
                 />
               </div>
 
-              <button
-                type="submit"
-                className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all flex items-center justify-center gap-2 shadow-lg text-sm sm:text-base"
-              >
-                Send Message
-                <Send size={18} />
-              </button>
+              <div className="space-y-3">
+                <button
+                  type="button"
+                  onClick={handleWhatsAppSubmit}
+                  className="w-full bg-gradient-to-r from-green-600 to-green-500 text-white px-6 py-3 rounded-lg font-medium hover:from-green-700 hover:to-green-600 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+                >
+                  <MessageCircle size={18} />
+                  Send via WhatsApp
+                </button>
+
+                <button
+                  type="button"
+                  onClick={handleEmailSubmit}
+                  className="w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-6 py-3 rounded-lg font-medium hover:from-purple-700 hover:to-pink-700 transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl transform hover:scale-105 text-sm sm:text-base"
+                >
+                  <Send size={18} />
+                  Send via Email
+                </button>
+
+                <p className="text-xs sm:text-sm text-gray-500 text-center mt-2">
+                  Choose your preferred contact method
+                </p>
+              </div>
             </form>
           </div>
         </div>
